@@ -34,20 +34,26 @@ brew tap caskroom/fonts
 brew install --cask font-hack-nerd-font font-firacode-nerd-font font-jetbrains-mono-nerd-font
 
 # clone dotfiles repo
-git clone --bare https://github.com/bboydflo/dotfiles.git .dotfiles/
+git clone --bare https://github.com/bboydflo/.dotfiles.git
 
 FISH_CONFIG_OSX="
-# improve fish config for osx
+# language
+set -x LANG en_US.UTF-8
+set -x LC_ALL en_US.UTF-8
+
+# .config path
+set -x CONFIG_PATH ~/.config
+
 # volta setup
 if type -q volta
-  set -gx VOLTA_HOME \"$HOME/.volta\"
-  set -gx PATH \"$VOLTA_HOME/bin\" $PATH
+  set -gx VOLTA_HOME "$HOME/.volta"
+  set -gx PATH "$VOLTA_HOME/bin" $PATH
 end
 
 # exa setup
 if type -q exa
-  alias ll \"exa -l -g --icons\"
-  alias lla \"ll -a\"
+  alias ll "exa -l -g --icons"
+  alias lla "ll -a"
 end
 
 # starship setup
@@ -56,27 +62,21 @@ if type -q starship
   starship init fish | source
 end
 
-# enhance fish path
-fish_add_path /Users/florinonciu/development:$PATH
-
 # miscellaneous aliases
-alias j 'z'
+alias j "z"
 alias dotfiles '/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 "
 echo FISH_CONFIG_OSX >> ~/.config/fish/config-osx.fish
 source ~/.config/fish/config.fish
 
-# echo ".dotfiles" >> .gitignore
-
 # overwrite custom config with configuration from dotfiles repo
 dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
-
-# overwrite configuration
-git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME
+dotfiles config --local user.name "Florin Onciu"
+dotfiles config --local user.email "<my-email-here>"
 ```
 
-> Note: You can run `dotfiles ls-tree -r main` to show the files that you are tracking if you are not sure at any point.
+> Note: Run `dotfiles ls-tree -r main` to show the files that are tracked
 
 ## Resources
 
