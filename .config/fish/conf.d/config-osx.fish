@@ -22,3 +22,5 @@ set GIT_PATH (which git)
 # miscellaneous aliases
 alias j='z'
 alias dotfiles='$GIT_PATH --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+alias tmux='tmux -f $HOME/.config/tmux/tmux.conf'
