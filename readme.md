@@ -48,11 +48,23 @@ dotfiles checkout
 # dotfiles config --local status.showUntrackedFiles no
 # dotfiles config --local user.name "Florin Onciu"
 # dotfiles config --local user.email "cosmin.onciu@gmail.com"
+
+# install tmux plugin manager
+# https://github.com/tmux-plugins/tpm
+# install plugins: CTRL+b + SHIFT+i
 ```
 
 > Note 1: might need to restart the terminal session
 
 > Note 2: Run `dotfiles ls-tree -r main` to show the files that are tracked
+
+## TMUX Powerline (https://github.com/erikw/tmux-powerline)
+
+```shell
+git clone https://github.com/erikw/tmux-powerline ~/.config/tmux
+
+# edit default theme found ~/.config/tmux/tmux-powerline/themes/default.sh
+```
 
 ## TMUX Shortcuts
 
@@ -63,6 +75,8 @@ dotfiles checkout
 - create a new tmux tab: `CMD/CTRL + t`
 
 - rename the current tab: `CMD/CTRL + ,`
+
+- kill the current tab: `CMD/CTRL + w`
 
 - navigate to next/previous tab: `CMD/CTRL + SHIFT + ]` && `CMD/CTRL + SHIFT + [`
 
@@ -75,6 +89,10 @@ dotfiles checkout
 - kill a current panel or tab: `CMD/CTRL + d`
 
 - zoom in current panel: `CMD/CTRL + z`
+
+- refresh tmux config: `CTRL+b + r`
+
+- list tmux sessions: `tmux session list`
 
 > Check `~/.config/alacritty/alacritty.yml` file to inspect other active shortcuts
 
