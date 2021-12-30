@@ -28,6 +28,7 @@ if status is-interactive
 
     # starship setup
     if type -q starship
+        set -x STARSHIP_CONFIG ~/.config/starship/config.toml
         # init starship
         # starship init fish | source
     end
