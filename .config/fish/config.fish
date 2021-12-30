@@ -35,17 +35,14 @@ if status is-interactive
 
     # better find
     if type -q fzf
-        export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+        export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border"
         alias f "find * -type f | fzf"
     end
 
-    # git path
-    set GIT_PATH (which git)
-
     # miscellaneous aliases
-    alias j='z'
-    alias dotfiles='$GIT_PATH --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-    alias tmux='tmux -f $HOME/.config/tmux/tmux.conf'
+    alias j="z"
+    alias dotfiles="(which git) --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+    alias tmux="tmux -f $HOME/.config/tmux/tmux.conf"
 
     # dotfiles configuration
     dotfiles config --local status.showUntrackedFiles no

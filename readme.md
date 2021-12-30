@@ -14,6 +14,10 @@ cd ~
 # install useful packages
 brew install git fish alacritty tmux volta fzf z diff-so-fancy
 
+# install nerd fonts (see list of fonts here https://github.com/Homebrew/homebrew-cask-fonts/tree/master/Casks)
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font font-jetbrains-mono-nerd-font
+
 # add fish to the list of installed shells
 echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
 # make fish the default shell
@@ -33,23 +37,22 @@ fisher update
 # install starship - https://github.com/starship/starship
 # https://starship.rs/guide/#%F0%9F%9A%80-installation
 
-# install nerd fonts (see list of fonts here https://github.com/Homebrew/homebrew-cask-fonts/tree/master/Casks)
-brew tap homebrew/cask-fonts
-brew install --cask font-hack-nerd-font font-jetbrains-mono-nerd-font
-
 # clone dotfiles repo
 git clone --bare https://github.com/bboydflo/.dotfiles.git .dotfiles
-
-> might need to restart the terminal session
+# configure fish alias
+alias dotfiles="/usr/local/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+# put every config file in its place
+dotfiles checkout
 
 # overwrite custom config with configuration from dotfiles repo
-dotfiles checkout
-dotfiles config --local status.showUntrackedFiles no
-dotfiles config --local user.name "Florin Onciu"
-dotfiles config --local user.email "cosmin.onciu@gmail.com"
+# dotfiles config --local status.showUntrackedFiles no
+# dotfiles config --local user.name "Florin Onciu"
+# dotfiles config --local user.email "cosmin.onciu@gmail.com"
 ```
 
-> Note: Run `dotfiles ls-tree -r main` to show the files that are tracked
+> Note 1: might need to restart the terminal session
+
+> Note 2: Run `dotfiles ls-tree -r main` to show the files that are tracked
 
 ## TMUX Shortcuts
 
