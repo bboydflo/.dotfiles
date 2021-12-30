@@ -61,7 +61,7 @@ dotfiles checkout
 ## TMUX Powerline (https://github.com/erikw/tmux-powerline)
 
 ```shell
-git clone https://github.com/erikw/tmux-powerline ~/.config/tmux
+git clone https://github.com/erikw/tmux-powerline ~/.config/tmux/tmux-powerline
 
 # edit default theme found ~/.config/tmux/tmux-powerline/themes/default.sh
 ```
