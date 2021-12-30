@@ -58,6 +58,8 @@ dotfiles checkout
 
 - create a new tmux session called wok: `tmux new -s work`
 
+- attach to the last session: `tmux attach #`
+
 - create a new tmux tab: `CMD/CTRL + t`
 
 - rename the current tab: `CMD/CTRL + ,`

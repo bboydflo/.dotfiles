@@ -39,9 +39,12 @@ if status is-interactive
         alias f "find * -type f | fzf"
     end
 
+    # git path
+    set GIT_PATH (which git)
+
     # miscellaneous aliases
     alias j="z"
-    alias dotfiles="(which git) --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+    alias dotfiles="$GIT_PATH --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
     alias tmux="tmux -f $HOME/.config/tmux/tmux.conf"
 
     # dotfiles configuration
