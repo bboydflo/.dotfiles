@@ -69,6 +69,8 @@ dotfiles config --local user.email "cosmin.onciu@gmail.com"
 
 - kill a current panel or tab: `CMD/CTRL + d`
 
+- zoom in current panel: `CMD/CTRL + z`
+
 > Check `~/.config/alacritty/alacritty.yml` file to inspect other active shortcuts
 
 ## Resources
