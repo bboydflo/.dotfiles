@@ -98,11 +98,13 @@ git clone https://github.com/erikw/tmux-powerline ~/.config/tmux/tmux-powerline
 
 ## Resources
 
-1. https://mck-workman.medium.com/how-to-manage-dotfiles-across-multiple-systems-698d3088288c
-2. https://github.com/nancynobody/.dotfiles
-3. https://github.com/kyazdani42/dotfiles
-4. https://www.anand-iyer.com/blog/2018/a-simpler-way-to-manage-your-dotfiles.html
-5. https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories
-6. https://www.freecodecamp.org/news/dive-into-dotfiles-part-2-6321b4a73608/
-7. https://github.com/mathiasbynens/dotfiles
-8. http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/
+1.  https://mck-workman.medium.com/how-to-manage-dotfiles-across-multiple-systems-698d3088288c
+2.  https://github.com/nancynobody/.dotfiles
+3.  https://github.com/kyazdani42/dotfiles
+4.  https://www.anand-iyer.com/blog/2018/a-simpler-way-to-manage-your-dotfiles.html
+5.  https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories
+6.  https://www.freecodecamp.org/news/dive-into-dotfiles-part-2-6321b4a73608/
+7.  https://github.com/mathiasbynens/dotfiles
+8.  http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/
+9.  https://reconshell.com/tmux-resources/ for more tmux resources
+10. https://github.com/sbernheim4/dotfiles cool example on how to bootstrap dotfiles on a new system
