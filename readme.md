@@ -107,4 +107,5 @@ git clone https://github.com/erikw/tmux-powerline ~/.config/tmux/tmux-powerline
 7.  https://github.com/mathiasbynens/dotfiles
 8.  http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/
 9.  https://reconshell.com/tmux-resources/ for more tmux resources
-10. https://github.com/sbernheim4/dotfiles cool example on how to bootstrap dotfiles on a new system
+10. https://medium.com/hackernoon/customizing-tmux-b3d2a5050207 understanding tmux configuration
+11. https://github.com/sbernheim4/dotfiles cool example on how to bootstrap dotfiles on a new system
