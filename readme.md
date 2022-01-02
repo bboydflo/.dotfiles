@@ -96,6 +96,22 @@ git clone https://github.com/erikw/tmux-powerline ~/.config/tmux/tmux-powerline
 
 > Check `~/.config/alacritty/alacritty.yml` file to inspect other active shortcuts
 
+---
+
+## Tmux Resources
+
+- official tmux docs: https://man.openbsd.org/tmux
+
+- more tmux docs https://www.man7.org/linux/man-pages/man1/tmux.1.html
+
+- https://devhints.io/tmux
+
+- https://thevaluable.dev/tmux-config-mouseless/
+
+- https://tao-of-tmux.readthedocs.io/en/latest/index.html
+
+---
+
 ## Resources
 
 1.  https://mck-workman.medium.com/how-to-manage-dotfiles-across-multiple-systems-698d3088288c
