@@ -5,13 +5,29 @@ set -g fish_greeting
 set -x LANG en_US.UTF-8
 set -x LC_ALL en_US.UTF-8
 
+# .config path
+set -x CONFIG_PATH ~/.config
+
+function _run_tat
+    switch (uname | string lower)
+        case darwin
+            # printf '%s' 
+            # source custom script through bass plugin
+            bass (sh $CONFIG_PATH/fish/custom-scripts/tmux-tat.sh)
+        case freebsd openbsd dragonfly
+            printf '%s' 
+        case linux
+            printf '%s' ☻
+        case '*'
+            printf '%s' '?'
+    end
+end
+
 # Commands to run in interactive sessions can go here
 if status is-interactive
-    # .config path
-    set -x CONFIG_PATH ~/.config
 
     # https://stackoverflow.com/a/48750830/1597360
-    set host_config ~/.config/fish/config-(hostname).fish
+    set host_config $CONFIG_PATH/fish/config-(hostname).fish
     test -r $host_config; and source $host_config
 
     # volta setup
@@ -28,7 +44,7 @@ if status is-interactive
 
     # starship setup
     if type -q starship
-        set -x STARSHIP_CONFIG ~/.config/starship/config.toml
+        set -x STARSHIP_CONFIG $CONFIG_PATH/starship/config.toml
         # init starship
         # starship init fish | source
     end
@@ -39,13 +55,18 @@ if status is-interactive
         alias f "find * -type f | fzf"
     end
 
+    # if bass available run alias that sources all custom bash scripts through bass
+    if type -q bass
+        alias tat="_run_tat"
+    end
+
     # git path
     set GIT_PATH (which git)
 
     # miscellaneous aliases
     alias j="z"
     alias dotfiles="$GIT_PATH --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-    alias tmux="tmux -f $HOME/.config/tmux/tmux.conf"
+    alias tmux="tmux -f $CONFIG_PATH/tmux/tmux.conf"
 
     # dotfiles configuration
     dotfiles config --local status.showUntrackedFiles no
