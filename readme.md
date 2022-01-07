@@ -10,14 +10,6 @@ To install simply run:
 curl https://raw.githubusercontent.com/bboydflo/.dotfiles/main/.config/dotfiles/scripts/install.sh | bash
 ```
 
-Be sure to also install the `JetBrainsMono` font using [brew](https://brew.sh)
-
-```sh
-# install nerd fonts (see list of fonts here https://github.com/Homebrew/homebrew-cask-fonts/tree/master/Casks)
-brew tap homebrew/cask-fonts
-brew install --cask font-jetbrains-mono font-hack-nerd-font font-jetbrains-mono-nerd-font
-```
-
 ## Manual instructions to complete the installation
 
 ```shell

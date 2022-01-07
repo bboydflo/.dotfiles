@@ -52,9 +52,41 @@ function installHomebrewPackages() {
     brew install ripgrep
     brew install neovim
 
+    # fonts
+    brew tap homebrew/cask-fonts
+    brew install --cask font-jetbrains-mono font-hack-nerd-font font-jetbrains-mono-nerd-font
+
     brew update
 
 }
+
+function installHomebrewCasks() {
+
+    echo "=================================="
+    echo "Installing homebrew casks:"
+    echo "git"
+    echo "fish"
+    echo "alacritty"
+    echo "tmux"
+    echo "volta"
+    echo "z"
+    echo "starship"
+
+    echo "diff-so-fancy"
+    echo "fzf"
+    echo "bat"
+    echo "ripgrep"
+    echo "neovim"
+    echo "=================================="
+
+    cd ~/
+
+    brew tap homebrew/cask-fonts
+
+
+}
+
+
 
 function setupFishShell() {
 
