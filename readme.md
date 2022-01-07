@@ -1,57 +1,41 @@
 # Dotfiles
 
-These are my dotfiles. To use them first install [git](https://git-scm.com/) or `brew install git`
+These are my dotfiles covering fish, tmux etc.
 
-## Usage on a completely new machine
+## Installation
 
-```shell
-# move into home directory
-cd ~
+To install simply run:
 
-# install brew if on macos/linux
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```sh
+curl https://raw.githubusercontent.com/bboydflo/.dotfiles/main/.config/dotfiles/scripts/install.sh | bash
+```
 
-# install useful packages
-brew install git fish alacritty tmux volta fzf z diff-so-fancy
+Be sure to also install the `JetBrainsMono` font using [brew](https://brew.sh)
 
+```sh
 # install nerd fonts (see list of fonts here https://github.com/Homebrew/homebrew-cask-fonts/tree/master/Casks)
 brew tap homebrew/cask-fonts
-brew install --cask font-hack-nerd-font font-jetbrains-mono-nerd-font
+brew install --cask font-jetbrains-mono font-hack-nerd-font font-jetbrains-mono-nerd-font
+```
 
-# add fish to the list of installed shells
-echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
-# make fish the default shell
-chsh -s /usr/local/bin/fish
+## Manual instructions to complete the installation
 
-# install fisher plugin manager for fish
-curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+```shell
 # show fisher commands
 fisher
 # install plugins
 fisher update
 
-# install tide plugin for fish
-# fisher install IlanCosman/tide@v5
-# configure tide
-# tide configure
-# install starship - https://github.com/starship/starship
-# https://starship.rs/guide/#%F0%9F%9A%80-installation
+# install tide plugin for fish and configure it
+fisher install IlanCosman/tide@v5
+tide configure
 
-# clone dotfiles repo
-git clone --bare https://github.com/bboydflo/.dotfiles.git .dotfiles
-# configure fish alias
-alias dotfiles="/usr/local/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 # put every config file in its place
 dotfiles checkout
 
-# overwrite custom config with configuration from dotfiles repo
-# dotfiles config --local status.showUntrackedFiles no
-# dotfiles config --local user.name "Florin Onciu"
-# dotfiles config --local user.email "cosmin.onciu@gmail.com"
-
-# install tmux plugin manager
-# https://github.com/tmux-plugins/tpm
+# install tmux plugin manager. https://github.com/tmux-plugins/tpm
 # install plugins: CTRL+b + SHIFT+i
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 ```
 
 > Note 1: might need to restart the terminal session
@@ -62,9 +46,9 @@ dotfiles checkout
 
 ```shell
 git clone https://github.com/erikw/tmux-powerline ~/.config/tmux/tmux-powerline
-
-# edit default theme found ~/.config/tmux/tmux-powerline/themes/default.sh
 ```
+
+> Edit default theme found `~/.config/tmux/tmux-powerline/themes/default.sh`
 
 ## TMUX Shortcuts
 

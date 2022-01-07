@@ -1,4 +1,9 @@
+# ==================================================================================
+#
 # check https://raw.githubusercontent.com/joshmedeski/dotfiles/master/install/osx.sh
+#
+# ==================================================================================
+
 echo "Finder: show all filename extensions"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
@@ -9,7 +14,7 @@ echo "expand save dialog by default"
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
 # echo "show the ~/Library folder in Finder"
-chflags nohidden ~/Library
+# chflags nohidden ~/Library
 
 # echo "disable resume system wide"
 # defaults write NSGlobalDomainNSQuitAlwaysKeepWindows -bool false
@@ -28,9 +33,6 @@ defaults write com.apple.dock autohide -bool true
 
 #echo "Make Dock icons of hidden applications translucent"
 #defaults write com.apple.dock showhidden -bool true
-
-#echo "Enable iTunes track notifications in the Dock"
-#defaults write com.apple.dock itunes-notifications -bool true
 
 # Disable menu bar transparency
 #defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
@@ -181,20 +183,20 @@ defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 # echo "Enable Dashboard dev mode (allows keeping widgets on the desktop)"
 # defaults write com.apple.dashboard devmode -bool true
 
-#echo "Reset Launchpad"
-#[ -e ~/Library/Application\ Support/Dock/*.db ] && rm ~/Library/Application\ Support/Dock/*.db
+# echo "Reset Launchpad"
+# [ -e ~/Library/Application\ Support/Dock/*.db ] && rm ~/Library/Application\ Support/Dock/*.db
 
 # echo "Disable local Time Machine backups"
 # hash tmutil &> /dev/null && sudo tmutil disablelocal
 
-#echo "Remove Dropbox's green checkmark icons in Finder"
-#file=/Applications/Dropbox.app/Contents/Resources/check.icns
-#[ -e "$file" ] && mv -f "$file" "$file.bak"
-#unset file
+# echo "Remove Dropbox's green checkmark icons in Finder"
+# file=/Applications/Dropbox.app/Contents/Resources/check.icns
+# [ -e "$file" ] && mv -f "$file" "$file.bak"
+# unset file
 
-#Fix for the ancient UTF-8 bug in QuickLook (http://mths.be/bbo)
+# Fix for the ancient UTF-8 bug in QuickLook (http://mths.be/bbo)
 # Commented out, as this is known to cause problems when saving files in Adobe Illustrator CS5 :(
-#echo "0x08000100:0" > ~/.CFUserTextEncoding
+# echo "0x08000100:0" > ~/.CFUserTextEncoding
 
 echo "Kill affected applications"
 for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done

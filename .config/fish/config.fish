@@ -65,10 +65,10 @@ if status is-interactive
 
     # miscellaneous aliases
     alias j="z"
-    alias dotfiles="$GIT_PATH --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
     alias tmux="tmux -f $CONFIG_PATH/tmux/tmux.conf"
 
     # dotfiles configuration
+    alias dotfiles="$GIT_PATH --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
     dotfiles config --local status.showUntrackedFiles no
     dotfiles config --local user.name "Florin Onciu"
     dotfiles config --local user.email "cosmin.onciu@gmail.com"
