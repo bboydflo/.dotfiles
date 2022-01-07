@@ -8,21 +8,6 @@ set -x LC_ALL en_US.UTF-8
 # .config path
 set -x CONFIG_PATH ~/.config
 
-function _run_tat
-    switch (uname | string lower)
-        case darwin
-            # printf '%s' 
-            # source custom script through bass plugin
-            bass (sh $CONFIG_PATH/fish/custom-scripts/tmux-tat.sh)
-        case freebsd openbsd dragonfly
-            printf '%s' 
-        case linux
-            printf '%s' ☻
-        case '*'
-            printf '%s' '?'
-    end
-end
-
 # Commands to run in interactive sessions can go here
 if status is-interactive
 
@@ -55,8 +40,23 @@ if status is-interactive
         alias f "find * -type f | fzf"
     end
 
-    # if bass available run alias that sources all custom bash scripts through bass
+    # if bass fish plugin available
     if type -q bass
+        function _run_tat
+            switch (uname | string lower)
+                case darwin
+                    # printf '%s' 
+                    # source custom script through bass plugin
+                    bass (sh $CONFIG_PATH/fish/custom-scripts/tmux-tat.sh)
+                case freebsd openbsd dragonfly
+                    printf '%s' 
+                case linux
+                    printf '%s' ☻
+                case '*'
+                    printf '%s' '?'
+            end
+        end
+
         alias tat="_run_tat"
     end
 

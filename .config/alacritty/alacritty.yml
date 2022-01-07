@@ -866,9 +866,9 @@ key_bindings:
   - { key: Down,           mods: Command,        chars: "\x02\x1b\x5b\x42"                 }
   # Navigate to sessions, window or panes via a tree widgt (Prefix + j)
   - { key: J,              mods: Command,        chars: "\x02\x6a"                         }
-  # Toggle the zoom state of the current tmux pane
+  # Toggle the zoom state of the current tmux pane (Prefix + z)
   - { key: Z,              mods: Command,        chars: "\x02\x7a"                         }
-  # Reload tmux configuration (0272 = Prefix + R)
+  # Reload tmux configuration (0252 = Prefix + R)
   - { key: R,              mods: Command,        chars: "\x02\x52"                         }
 
   # TODO:

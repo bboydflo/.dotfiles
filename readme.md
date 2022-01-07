@@ -68,6 +68,8 @@ git clone https://github.com/erikw/tmux-powerline ~/.config/tmux/tmux-powerline
 
 ## TMUX Shortcuts
 
+- `tat` takes the current folder and attaches to the sesion with the same name if it exists otherwise creates a session with that name
+
 - create a new tmux session called wok: `tmux new -s work`
 
 - attach to the last session: `tmux attach #`
@@ -78,21 +80,23 @@ git clone https://github.com/erikw/tmux-powerline ~/.config/tmux/tmux-powerline
 
 - kill the current tab: `CMD/CTRL + w`
 
-- navigate to next/previous tab: `CMD/CTRL + SHIFT + ]` && `CMD/CTRL + SHIFT + [`
+- navigate to next/previous tab: `CMD/CTRL + SHIFT + ⭢` && `CMD/CTRL + SHIFT + ⭠`
 
-- create a new vertical panel: `CMD/CTRL + n`
+- create a new vertical panel: `CMD/CTRL + \`
 
-- create a new horizontal panel: `CMD/CTRL + SHIFT + n`
+- create a new horizontal panel: `CMD/CTRL + SHIFT + \`
 
 - navigate between panels: `CMD/CTRL + ⭠/⭡/⭢/⭣`
 
-- kill a current panel or tab: `CMD/CTRL + d`
+- detach the current tmux session: `CMD/CTRL + d`
 
 - zoom in current panel: `CMD/CTRL + z`
 
-- refresh tmux config: `CTRL+b + r`
+- refresh tmux config: `CMD/CTRL + r`
 
 - list tmux sessions: `tmux session list`
+
+- navigate tmux sessions, windows and panes via choose-tree: `CMD/CTRL + j`
 
 > Check `~/.config/alacritty/alacritty.yml` file to inspect other active shortcuts
 
