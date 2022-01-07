@@ -52,41 +52,61 @@ function installHomebrewPackages() {
     brew install ripgrep
     brew install neovim
 
-    # fonts
+    echo "=================================="
+    echo "Installing homebrew fonts:"
+    echo "font-jetbrains-mono"
+    echo "font-hack-nerd-font"
+    echo "font-jetbrains-mono-nerd-font"
+    echo "=================================="
+
     brew tap homebrew/cask-fonts
     brew install --cask font-jetbrains-mono font-hack-nerd-font font-jetbrains-mono-nerd-font
+
+    echo "=================================="
+    echo "Installing other software:"
+    echo "visual-studio-code"
+    echo "sublime-text"
+    echo "webtorrent"
+    echo "vlc"
+    echo "bitwarden"
+    echo "vscodium"
+    echo "clipy"
+    echo "appcleaner"
+    echo "foxitreader"
+    echo "notable"
+    echo "lepton"
+    echo "kap"
+    echo "=================================="
+
+    brew install --cask visual-studio-code
+    brew install --cask sublime-text
+    brew install --cask webtorrent
+    brew install --cask vlc
+    brew install --cask bitwarden
+    brew install --cask vscodium
+    brew install --cask clipy
+    brew install --cask soda-player
+    brew install --cask appcleaner
+    brew install --cask foxitreader
+    brew install --cask notable
+    brew install --cask lepton
+    brew install --cask kap
+
+    echo "=================================="
+    echo "More apps to install manually:"
+    echo "Alfred 3"
+    echo "Lyia"
+    echo "HEIC Converter"
+    echo "Amphetamine"
+    echo "Spectacle"
+    echo "tad"
+    echo "=================================="
+    # brew install --cask spectacle
+    # brew install --cask tad
 
     brew update
 
 }
-
-function installHomebrewCasks() {
-
-    echo "=================================="
-    echo "Installing homebrew casks:"
-    echo "git"
-    echo "fish"
-    echo "alacritty"
-    echo "tmux"
-    echo "volta"
-    echo "z"
-    echo "starship"
-
-    echo "diff-so-fancy"
-    echo "fzf"
-    echo "bat"
-    echo "ripgrep"
-    echo "neovim"
-    echo "=================================="
-
-    cd ~/
-
-    brew tap homebrew/cask-fonts
-
-
-}
-
-
 
 function setupFishShell() {
 
