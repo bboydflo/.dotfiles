@@ -28,8 +28,10 @@ function installHomebrewPackages() {
     echo "volta"
     echo "z"
     echo "starship"
+    echo "firefox"
 
     echo "diff-so-fancy"
+    echo "delta"
     echo "fzf"
     echo "bat"
     echo "ripgrep"
@@ -45,8 +47,10 @@ function installHomebrewPackages() {
     brew install volta
     brew install z
     brew install starship
+    brew install firefox
 
     brew install diff-so-fancy
+    brew install delta
     brew install fzf
     brew install bat
     brew install ripgrep
