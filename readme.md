@@ -34,7 +34,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
 > Note 2: Run `dotfiles ls-tree -r main` to show the files that are tracked
 
-## TMUX Powerline (https://github.com/erikw/tmux-powerline)
+## (TMUX Powerline)[https://github.com/erikw/tmux-powerline]
 
 ```shell
 git clone https://github.com/erikw/tmux-powerline ~/.config/tmux/tmux-powerline
@@ -57,6 +57,8 @@ git clone https://github.com/erikw/tmux-powerline ~/.config/tmux/tmux-powerline
 - kill the current tab: `CMD/CTRL + w`
 
 - navigate to next/previous tab: `CMD/CTRL + SHIFT + ⭢` && `CMD/CTRL + SHIFT + ⭠`
+
+- enable copy mode: `CMD/CTRL + [`
 
 - create a new vertical panel: `CMD/CTRL + \`
 
