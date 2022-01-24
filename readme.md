@@ -50,21 +50,21 @@ git clone https://github.com/erikw/tmux-powerline ~/.config/tmux/tmux-powerline
 
 - attach to the last session: `tmux attach #`
 
-- create a new tmux tab: `CMD/CTRL + t`
+- create a new tmux tab (window): `CMD/CTRL + t`
 
-- rename the current tab: `CMD/CTRL + ,`
+- rename the current tab (window): `CMD/CTRL + ,`
 
-- kill the current tab: `CMD/CTRL + w`
+- kill the current tab (window): `CMD/CTRL + w`
 
-- navigate to next/previous tab: `CMD/CTRL + SHIFT + ⭢` && `CMD/CTRL + SHIFT + ⭠`
+- navigate to next/previous tab (window): `CMD/CTRL + SHIFT + ⭢` && `CMD/CTRL + SHIFT + ⭠`
 
 - enable copy mode: `CMD/CTRL + [`
 
-- create a new vertical panel: `CMD/CTRL + \`
+- create a new vertical pane: `CMD/CTRL + \`
 
-- create a new horizontal panel: `CMD/CTRL + SHIFT + \`
+- create a new horizontal pane: `CMD/CTRL + SHIFT + \`
 
-- navigate between panels: `CMD/CTRL + ⭠/⭡/⭢/⭣`
+- navigate between panes: `CMD/CTRL + ⭠/⭡/⭢/⭣`
 
 - navigate to last active window: `CMD/CTRL + l`
 
@@ -72,7 +72,7 @@ git clone https://github.com/erikw/tmux-powerline ~/.config/tmux/tmux-powerline
 
 - detach the current tmux session: `CMD/CTRL + d`
 
-- zoom in current panel: `CMD/CTRL + z`
+- zoom in current pane: `CMD/CTRL + z`
 
 - refresh tmux config: `CMD/CTRL + r`
 
