@@ -48,6 +48,8 @@ git clone https://github.com/erikw/tmux-powerline ~/.config/tmux/tmux-powerline
 
 - create a new tmux session called wok: `tmux new -s work`
 
+- list all available tmux commands: `tmux list-commands`
+
 - attach to the last session: `tmux attach #`
 
 - create a new tmux tab (window): `CMD/CTRL + t`
