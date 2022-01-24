@@ -869,6 +869,10 @@ key_bindings:
   - { key: Down,           mods: Command,        chars: "\x02\x1b\x5b\x42"                 }
   # Navigate to sessions, window or panes via a tree widgt (Prefix + j)
   - { key: J,              mods: Command,        chars: "\x02\x6a"                         }
+  # Go to the last tmux window (Prefix + l)
+  - { key: L,              mods: Command,        chars: "\x02\x6c"                         }
+  # break current tmux pane onto a new window (Prefix + b)
+  - { key: B,              mods: Command,        chars: "\x02\x62"                         }
   # Toggle the zoom state of the current tmux pane (Prefix + z)
   - { key: Z,              mods: Command,        chars: "\x02\x7a"                         }
   # Reload tmux configuration (0252 = Prefix + R)
@@ -911,6 +915,7 @@ key_bindings:
 import:
   - ~/.config/alacritty/ayu_dark.yml
   # - ~/.config/alacritty/blood_moon.yml
+  # - ~/.config/alacritty/gruvbox_dark.yml
   # - ~/.config/alacritty/high_contrast.yml
   # - ~/.config/alacritty/hyper.yml
   # - ~/.config/alacritty/nord.yml

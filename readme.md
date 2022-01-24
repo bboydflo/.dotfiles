@@ -66,6 +66,10 @@ git clone https://github.com/erikw/tmux-powerline ~/.config/tmux/tmux-powerline
 
 - navigate between panels: `CMD/CTRL + ⭠/⭡/⭢/⭣`
 
+- navigate to last active window: `CMD/CTRL + l`
+
+- detach current pane onto a new window: `CMD/CTRL + b`
+
 - detach the current tmux session: `CMD/CTRL + d`
 
 - zoom in current panel: `CMD/CTRL + z`
