@@ -1,5 +1,5 @@
 # nord
-background_opacity: 0.96
+# background_opacity: 0.96
 colors:
   primary:
     background: "#2E3440"
