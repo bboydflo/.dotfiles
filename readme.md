@@ -15,7 +15,7 @@ Then follow the manual instructions to complete the installation.
 ```shell
 which git
 alias dotfiles={replace-with-path-to-git from (which git)} --git-dir=$HOME/.dotfiles/ --work-tree=$HOME
-# put every config file in its place. may need to restart shell session
+# put every config file in its place
 dotfiles checkout
 # restart shell session
 ```
