@@ -29,6 +29,7 @@ function installHomebrewPackages() {
     echo "z"
     echo "starship"
     echo "firefox"
+    echo "exa"
 
     echo "diff-so-fancy"
     echo "delta"
@@ -49,6 +50,7 @@ function installHomebrewPackages() {
     brew install starship
     brew install firefox
 
+    brew install exa
     brew install diff-so-fancy
     brew install delta
     brew install fzf
