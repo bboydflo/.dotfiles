@@ -10,7 +10,15 @@ To install simply run:
 curl https://raw.githubusercontent.com/bboydflo/.dotfiles/main/.config/dotfiles/scripts/install.sh | bash
 ```
 
-## Manual instructions to complete the installation
+Then follow the manual instructions to complete the installation.
+
+```shell
+which git
+alias dotfiles={replace-with-path-to-git from (which git)} --git-dir=$HOME/.dotfiles/ --work-tree=$HOME
+# put every config file in its place
+dotfiles checkout
+# restart shell session
+```
 
 ```shell
 # show fisher commands
@@ -18,16 +26,17 @@ fisher
 # install plugins
 fisher update
 
+# install bass plugin for fish
+# fisher install edc/bass
 # install tide plugin for fish and configure it
-fisher install IlanCosman/tide@v5
+# fisher install IlanCosman/tide@v5
 tide configure
 
-# put every config file in its place
-dotfiles checkout
-
 # install tmux plugin manager. https://github.com/tmux-plugins/tpm
-# install plugins: CTRL+b + SHIFT+i
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+# enter tmux
+tmux # or tat
+# install all plugins: CTRL+b + SHIFT+i
 ```
 
 > Note 1: might need to restart the terminal session

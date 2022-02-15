@@ -5,6 +5,7 @@ function installHomebrew() {
     echo "==================================="
     echo "Installing homebrew"
     echo "==================================="
+    echo "                                   "
 
     cd ~/
 
@@ -23,6 +24,7 @@ function installHomebrewPackages() {
     echo "Installing homebrew packages:"
     echo "git"
     echo "fish"
+    echo "fisher"
     echo "alacritty"
     echo "tmux"
     echo "volta"
@@ -38,11 +40,13 @@ function installHomebrewPackages() {
     echo "ripgrep"
     echo "neovim"
     echo "=================================="
+    echo "                                   "
 
     cd ~/
 
     brew install git
     brew install fish
+    brew install fisher
     brew install alacritty
     brew install tmux
     brew install volta
@@ -64,6 +68,7 @@ function installHomebrewPackages() {
     echo "font-hack-nerd-font"
     echo "font-jetbrains-mono-nerd-font"
     echo "=================================="
+    echo "                                   "
 
     brew tap homebrew/cask-fonts
     brew install --cask font-jetbrains-mono font-hack-nerd-font font-jetbrains-mono-nerd-font
@@ -82,7 +87,11 @@ function installHomebrewPackages() {
     echo "notable"
     echo "lepton"
     echo "kap"
+    echo "raycast"
+    echo "f.lux"
+    echo "hiddenbar"
     echo "=================================="
+    echo "                                   "
 
     brew install --cask visual-studio-code
     brew install --cask sublime-text
@@ -97,16 +106,20 @@ function installHomebrewPackages() {
     brew install --cask notable
     brew install --cask lepton
     brew install --cask kap
+    brew install --cask raycast
+    brew install --cask flux
+    brew install --cask hiddenbar
 
     echo "=================================="
     echo "More apps to install manually:"
-    echo "Alfred 3"
     echo "Lyia"
     echo "HEIC Converter"
     echo "Amphetamine"
     echo "Spectacle"
     echo "tad"
+    echo "Pika"
     echo "=================================="
+    echo "                                   "
     # brew install --cask spectacle
     # brew install --cask tad
 
@@ -119,25 +132,15 @@ function setupFishShell() {
     echo "==================================="
     echo "Setup Fish Shell"
     echo "==================================="
+    echo "                                   "
 
     cd ~/
 
     # add fish to the list of installed shells
-    echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
+    echo $(which fish) | sudo tee -a /etc/shells
 
     # make fish the default shell
-    chsh -s /usr/local/bin/fish
-
-    # install fisher plugin manager for fish
-    curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-
-    # Manual setup
-    fisher install IlanCosman/tide@v5
-    tide configure
-    # show fisher commands
-    # fisher
-    # install plugins
-    # fisher update
+    chsh -s $(which fish)
 }
 
 function installVoltaAndNodeJs() {
@@ -145,6 +148,7 @@ function installVoltaAndNodeJs() {
     echo "==================================="
     echo "Installing Volta and Node.js"
     echo "==================================="
+    echo "                                   "
 
     cd ~/
 
@@ -160,6 +164,7 @@ function cloneDotfiles() {
     echo "==================================="
     echo "Cloning dotfiles"
     echo "==================================="
+    echo "                                   "
 
     cd ~/
 
@@ -171,6 +176,7 @@ function setupTmux() {
     echo "==================================="
     echo "Linking tmux config"
     echo "==================================="
+    echo "                                   "
 
     cd ~/
 
@@ -183,6 +189,7 @@ function setBetterMacDefaults() {
     echo "==================================="
     echo "Set better MacOS defaults"
     echo "==================================="
+    echo "                                   "
 
     source ~/.config/dotfiles/scripts/config-macos.sh
 }
@@ -192,13 +199,14 @@ function install() {
     echo "==================================="
     echo "Beginning Installation..."
     echo "==================================="
+    echo "                                   "
 
     installHomebrew
     installHomebrewPackages
     installVoltaAndNodeJs
     setupFishShell
     cloneDotfiles
-    # setupTmux
+    setupTmux
     setBetterMacDefaults
 }
 
