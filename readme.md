@@ -18,6 +18,9 @@ fisher
 # install plugins
 fisher update
 
+# install bass plugin for fish
+fisher install edc/bass
+
 # install tide plugin for fish and configure it
 fisher install IlanCosman/tide@v5
 tide configure

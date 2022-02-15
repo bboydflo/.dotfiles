@@ -137,6 +137,7 @@ function setupFishShell() {
     # Manual setup
     # fisher install IlanCosman/tide@v5
     # tide configure
+    exec bash -c "fisher install IlanCosman/tide@v5; tide configure"
     # show fisher commands
     # fisher
     # install plugins
@@ -169,7 +170,8 @@ function cloneDotfiles() {
     git clone --bare https://github.com/bboydflo/.dotfiles.git .dotfiles
 
     # alias dotfiles="/usr/local/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-    alias dotfiles="$(which git) --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+    # alias dotfiles="$(which git) --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+    exec bash -c "alias dotfiles=\"$(which git) --git-dir=$HOME/.dotfiles/ --work-tree=$HOME\""
     # put every config file in its place
     dotfiles checkout
 }
