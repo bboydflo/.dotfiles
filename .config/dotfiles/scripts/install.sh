@@ -132,6 +132,8 @@ function setupFishShell() {
     curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 
     # Manual setup
+    fisher install IlanCosman/tide@v5
+    tide configure
     # show fisher commands
     # fisher
     # install plugins
