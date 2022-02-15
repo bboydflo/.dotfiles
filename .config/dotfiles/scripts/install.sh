@@ -23,6 +23,7 @@ function installHomebrewPackages() {
     echo "Installing homebrew packages:"
     echo "git"
     echo "fish"
+    echo "fisher"
     echo "alacritty"
     echo "tmux"
     echo "volta"
@@ -43,6 +44,7 @@ function installHomebrewPackages() {
 
     # brew install git
     # brew install fish
+    brew install fisher
     # brew install alacritty
     # brew install tmux
     # brew install volta
@@ -96,7 +98,7 @@ function installHomebrewPackages() {
     # brew install --cask foxitreader
     # brew install --cask notable
     # brew install --cask lepton
-    brew install --cask kap
+    # brew install --cask kap
 
     echo "=================================="
     echo "More apps to install manually:"
@@ -127,10 +129,10 @@ function setupFishShell() {
     echo $(which fish) | sudo tee -a /etc/shells
 
     # make fish the default shell
-    sudo chsh -s /usr/local/bin/fish
+    chsh -s /usr/local/bin/fish
 
     # install fisher plugin manager for fish
-    curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+    # curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 
     # Manual setup
     fisher install IlanCosman/tide@v5
