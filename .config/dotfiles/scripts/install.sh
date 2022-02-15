@@ -41,22 +41,22 @@ function installHomebrewPackages() {
 
     cd ~/
 
-    brew install git
-    brew install fish
-    brew install alacritty
-    brew install tmux
-    brew install volta
-    brew install z
-    brew install starship
-    brew install firefox
+    # brew install git
+    # brew install fish
+    # brew install alacritty
+    # brew install tmux
+    # brew install volta
+    # brew install z
+    # brew install starship
+    # brew install firefox
 
-    brew install exa
-    brew install diff-so-fancy
-    brew install delta
-    brew install fzf
-    brew install bat
-    brew install ripgrep
-    brew install neovim
+    # brew install exa
+    # brew install diff-so-fancy
+    # brew install delta
+    # brew install fzf
+    # brew install bat
+    # brew install ripgrep
+    # brew install neovim
 
     echo "=================================="
     echo "Installing homebrew fonts:"
@@ -65,8 +65,8 @@ function installHomebrewPackages() {
     echo "font-jetbrains-mono-nerd-font"
     echo "=================================="
 
-    brew tap homebrew/cask-fonts
-    brew install --cask font-jetbrains-mono font-hack-nerd-font font-jetbrains-mono-nerd-font
+    # brew tap homebrew/cask-fonts
+    # brew install --cask font-jetbrains-mono font-hack-nerd-font font-jetbrains-mono-nerd-font
 
     echo "=================================="
     echo "Installing other software:"
@@ -84,18 +84,18 @@ function installHomebrewPackages() {
     echo "kap"
     echo "=================================="
 
-    brew install --cask visual-studio-code
-    brew install --cask sublime-text
-    brew install --cask webtorrent
-    brew install --cask vlc
-    brew install --cask bitwarden
-    brew install --cask vscodium
-    brew install --cask clipy
-    brew install --cask soda-player
-    brew install --cask appcleaner
-    brew install --cask foxitreader
-    brew install --cask notable
-    brew install --cask lepton
+    # brew install --cask visual-studio-code
+    # brew install --cask sublime-text
+    # brew install --cask webtorrent
+    # brew install --cask vlc
+    # brew install --cask bitwarden
+    # brew install --cask vscodium
+    # brew install --cask clipy
+    # brew install --cask soda-player
+    # brew install --cask appcleaner
+    # brew install --cask foxitreader
+    # brew install --cask notable
+    # brew install --cask lepton
     brew install --cask kap
 
     echo "=================================="
