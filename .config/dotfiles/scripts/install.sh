@@ -87,6 +87,9 @@ function installHomebrewPackages() {
     echo "notable"
     echo "lepton"
     echo "kap"
+    echo "raycast"
+    echo "f.lux"
+    echo "hiddenbar"
     echo "=================================="
     echo "                                   "
 
@@ -103,19 +106,22 @@ function installHomebrewPackages() {
     brew install --cask notable
     brew install --cask lepton
     brew install --cask kap
+    brew install --cask raycast
+    brew install --cask flux
+    brew install --cask hiddenbar
 
     echo "=================================="
     echo "More apps to install manually:"
-    echo "Alfred 3"
     echo "Lyia"
     echo "HEIC Converter"
     echo "Amphetamine"
     echo "Spectacle"
     echo "tad"
+    echo "Pika"
     echo "=================================="
     echo "                                   "
-    brew install --cask spectacle
-    brew install --cask tad
+    # brew install --cask spectacle
+    # brew install --cask tad
 
     brew update
 
