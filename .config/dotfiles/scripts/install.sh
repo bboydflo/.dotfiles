@@ -167,6 +167,11 @@ function cloneDotfiles() {
     cd ~/
 
     git clone --bare https://github.com/bboydflo/.dotfiles.git .dotfiles
+
+    # alias dotfiles="/usr/local/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+    alias dotfiles="$(which git) --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+    # put every config file in its place
+    dotfiles checkout
 }
 
 function setupTmux() {
@@ -201,7 +206,7 @@ function install() {
     installVoltaAndNodeJs
     setupFishShell
     cloneDotfiles
-    # setupTmux
+    setupTmux
     setBetterMacDefaults
 }
 
