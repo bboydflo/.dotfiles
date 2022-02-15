@@ -137,7 +137,7 @@ function setupFishShell() {
     # Manual setup
     # fisher install IlanCosman/tide@v5
     # tide configure
-    exec bash -c "fisher install IlanCosman/tide@v5; tide configure"
+    exec bash -c "fish; fisher install IlanCosman/tide@v5; tide configure; bash"
     # show fisher commands
     # fisher
     # install plugins
