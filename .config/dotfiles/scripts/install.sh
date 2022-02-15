@@ -125,26 +125,13 @@ function setupFishShell() {
     cd ~/
 
     local fish_path=$(which fish)
-
     # add fish to the list of installed shells
     # echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
     # echo $(which fish) | sudo tee -a /etc/shells
     echo $fish_path | sudo tee -a /etc/shells
 
     # make fish the default shell
-    chsh -s /usr/local/bin/fish
-
-    # install fisher plugin manager for fish
-    # curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-
-    # Manual setup
-    # fisher install IlanCosman/tide@v5
-    # tide configure
-    # exec bash -c "fish; fisher install IlanCosman/tide@v5; tide configure; bash"
-    # show fisher commands
-    # fisher
-    # install plugins
-    # fisher update
+    chsh -s $fish_path
 }
 
 function installVoltaAndNodeJs() {
