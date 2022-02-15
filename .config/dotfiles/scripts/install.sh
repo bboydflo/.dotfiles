@@ -126,7 +126,7 @@ function setupFishShell() {
     echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
 
     # make fish the default shell
-    chsh -s /usr/local/bin/fish
+    sudo chsh -s /usr/local/bin/fish
 
     # install fisher plugin manager for fish
     curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
