@@ -124,9 +124,12 @@ function setupFishShell() {
 
     cd ~/
 
+    local fish_path=$(which fish)
+
     # add fish to the list of installed shells
     # echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
-    echo $(which fish) | sudo tee -a /etc/shells
+    # echo $(which fish) | sudo tee -a /etc/shells
+    echo $fish_path | sudo tee -a /etc/shells
 
     # make fish the default shell
     chsh -s /usr/local/bin/fish

@@ -13,6 +13,11 @@ curl https://raw.githubusercontent.com/bboydflo/.dotfiles/main/.config/dotfiles/
 ## Manual instructions to complete the installation
 
 ```shell
+# put every config file in its place. may need to restart shell session
+dotfiles checkout
+```
+
+```shell
 # show fisher commands
 fisher
 # install plugins
@@ -24,9 +29,6 @@ fisher install edc/bass
 # install tide plugin for fish and configure it
 fisher install IlanCosman/tide@v5
 tide configure
-
-# put every config file in its place
-dotfiles checkout
 
 # install tmux plugin manager. https://github.com/tmux-plugins/tpm
 # install plugins: CTRL+b + SHIFT+i
