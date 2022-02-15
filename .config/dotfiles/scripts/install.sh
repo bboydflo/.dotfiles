@@ -5,6 +5,7 @@ function installHomebrew() {
     echo "==================================="
     echo "Installing homebrew"
     echo "==================================="
+    echo "                                   "
 
     cd ~/
 
@@ -39,26 +40,27 @@ function installHomebrewPackages() {
     echo "ripgrep"
     echo "neovim"
     echo "=================================="
+    echo "                                   "
 
     cd ~/
 
-    # brew install git
-    # brew install fish
+    brew install git
+    brew install fish
     brew install fisher
-    # brew install alacritty
-    # brew install tmux
-    # brew install volta
-    # brew install z
-    # brew install starship
-    # brew install firefox
+    brew install alacritty
+    brew install tmux
+    brew install volta
+    brew install z
+    brew install starship
+    brew install firefox
 
-    # brew install exa
-    # brew install diff-so-fancy
-    # brew install delta
-    # brew install fzf
-    # brew install bat
-    # brew install ripgrep
-    # brew install neovim
+    brew install exa
+    brew install diff-so-fancy
+    brew install delta
+    brew install fzf
+    brew install bat
+    brew install ripgrep
+    brew install neovim
 
     echo "=================================="
     echo "Installing homebrew fonts:"
@@ -66,9 +68,10 @@ function installHomebrewPackages() {
     echo "font-hack-nerd-font"
     echo "font-jetbrains-mono-nerd-font"
     echo "=================================="
+    echo "                                   "
 
-    # brew tap homebrew/cask-fonts
-    # brew install --cask font-jetbrains-mono font-hack-nerd-font font-jetbrains-mono-nerd-font
+    brew tap homebrew/cask-fonts
+    brew install --cask font-jetbrains-mono font-hack-nerd-font font-jetbrains-mono-nerd-font
 
     echo "=================================="
     echo "Installing other software:"
@@ -85,20 +88,21 @@ function installHomebrewPackages() {
     echo "lepton"
     echo "kap"
     echo "=================================="
+    echo "                                   "
 
-    # brew install --cask visual-studio-code
-    # brew install --cask sublime-text
-    # brew install --cask webtorrent
-    # brew install --cask vlc
-    # brew install --cask bitwarden
-    # brew install --cask vscodium
-    # brew install --cask clipy
-    # brew install --cask soda-player
-    # brew install --cask appcleaner
-    # brew install --cask foxitreader
-    # brew install --cask notable
-    # brew install --cask lepton
-    # brew install --cask kap
+    brew install --cask visual-studio-code
+    brew install --cask sublime-text
+    brew install --cask webtorrent
+    brew install --cask vlc
+    brew install --cask bitwarden
+    brew install --cask vscodium
+    brew install --cask clipy
+    brew install --cask soda-player
+    brew install --cask appcleaner
+    brew install --cask foxitreader
+    brew install --cask notable
+    brew install --cask lepton
+    brew install --cask kap
 
     echo "=================================="
     echo "More apps to install manually:"
@@ -109,8 +113,9 @@ function installHomebrewPackages() {
     echo "Spectacle"
     echo "tad"
     echo "=================================="
-    # brew install --cask spectacle
-    # brew install --cask tad
+    echo "                                   "
+    brew install --cask spectacle
+    brew install --cask tad
 
     brew update
 
@@ -121,17 +126,15 @@ function setupFishShell() {
     echo "==================================="
     echo "Setup Fish Shell"
     echo "==================================="
+    echo "                                   "
 
     cd ~/
 
-    local fish_path=$(which fish)
     # add fish to the list of installed shells
-    # echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
-    # echo $(which fish) | sudo tee -a /etc/shells
-    echo $fish_path | sudo tee -a /etc/shells
+    echo $(which fish) | sudo tee -a /etc/shells
 
     # make fish the default shell
-    chsh -s $fish_path
+    chsh -s $(which fish)
 }
 
 function installVoltaAndNodeJs() {
@@ -139,6 +142,7 @@ function installVoltaAndNodeJs() {
     echo "==================================="
     echo "Installing Volta and Node.js"
     echo "==================================="
+    echo "                                   "
 
     cd ~/
 
@@ -154,16 +158,11 @@ function cloneDotfiles() {
     echo "==================================="
     echo "Cloning dotfiles"
     echo "==================================="
+    echo "                                   "
 
     cd ~/
 
     git clone --bare https://github.com/bboydflo/.dotfiles.git .dotfiles
-
-    # alias dotfiles="/usr/local/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-    # alias dotfiles="$(which git) --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-    exec bash -c "alias dotfiles=\"$(which git) --git-dir=$HOME/.dotfiles/ --work-tree=$HOME\""
-    # put every config file in its place
-    dotfiles checkout
 }
 
 function setupTmux() {
@@ -171,6 +170,7 @@ function setupTmux() {
     echo "==================================="
     echo "Linking tmux config"
     echo "==================================="
+    echo "                                   "
 
     cd ~/
 
@@ -183,6 +183,7 @@ function setBetterMacDefaults() {
     echo "==================================="
     echo "Set better MacOS defaults"
     echo "==================================="
+    echo "                                   "
 
     source ~/.config/dotfiles/scripts/config-macos.sh
 }
@@ -192,6 +193,7 @@ function install() {
     echo "==================================="
     echo "Beginning Installation..."
     echo "==================================="
+    echo "                                   "
 
     installHomebrew
     installHomebrewPackages
