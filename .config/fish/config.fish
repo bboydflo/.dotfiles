@@ -5,6 +5,9 @@ set -g fish_greeting
 set -x LANG en_US.UTF-8
 set -x LC_ALL en_US.UTF-8
 
+# finish fish installation
+eval (/opt/homebrew/bin/brew shellenv)
+
 # .config path
 set -x CONFIG_PATH ~/.config
 
