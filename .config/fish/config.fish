@@ -62,3 +62,5 @@ if status is-interactive
     dotfiles config --local user.email "cosmin.onciu@gmail.com"
 end
 
+
+source /opt/homebrew/opt/asdf/libexec/asdf.fish
